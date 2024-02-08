@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:05:03 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 14:32:40 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/08 16:09:04 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ private:
 public:
 	Sed(std::string file, std::string s1, std::string s2);
 	~Sed(void);
-	void	getFile(void);
+	int		getFile(void);
 	void	createFile(void);
 };
 

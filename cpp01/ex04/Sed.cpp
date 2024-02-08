@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 12:21:57 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 14:43:51 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/08 16:14:30 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,31 @@ Sed::~Sed() {}
 
 void	Sed::createFile(void)
 {
-	std::ofstream	newfile;
+	std::ofstream	newfile ((this->_file.substr(0, this->_file.size()).append(".replace")).c_str());
 	int				i;
 	int				j;
 
 	i = 0;
 	j = -1;
-	while (this->_str[i])
+	while (j != (int)std::string::npos || i == 0)
 	{
 		j = _str.find(this->_s1.c_str(), j + 1, this->_s1.size());
-		while (this->_str[i] && i < j)
+		if (j != (int)std::string::npos)
 		{
-			newfile << this->_str[i];
-			i++;
+			newfile << this->_str.substr(i, j - i);
+			newfile << this->_s2;
+			i = j + this->_s1.size();
+		}
+		else
+		{
+			newfile << this->_str.substr(i);
+			i = 1;
 		}
 	}
+	newfile.close();
 }
 
-void	Sed::getFile(void)
+int	Sed::getFile(void)
 {
 	std::ifstream	myfile;
 	char			c;
@@ -49,8 +56,8 @@ void	Sed::getFile(void)
 	myfile.open((this->_file).c_str());
 	if (myfile.fail())
 	{
-		std::cout << "No such file or directory" << std::endl;
-		return ;
+		std::cout << "File not valid" << std::endl;
+		return (1);
 	}
 	while (!myfile.eof())
 	{
@@ -59,4 +66,5 @@ void	Sed::getFile(void)
 			this->_str += c;
 	}
 	myfile.close();
+	return (0);
 }

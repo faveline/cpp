@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/08 12:04:08 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 16:08:57 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/08 16:18:33 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/08 17:26:20 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sed.hpp"
+#ifndef HARL_H
+# define HARL_H
 
-int	main(int argc, char *argv[])
+# include <iostream>
+
+class Harl
 {
-	if (argc != 4)
-	{
-		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
-	}
-	std::string	str1 = argv[1];
-	std::string	str2 = argv[2];
-	std::string	str3 = argv[3];
-	Sed	sed(str1 , str2, str3);
-	
-	if (sed.getFile() == 1)
-		return (1);
-	sed.createFile();
-	return (0);
-}
+private:
+	void	_debug(void);
+	void	_info(void);
+	void	_warning(void);
+	void	_error(void);
+public:
+	Harl(void);
+	~Harl(void);
+	void	complain(std::string level);
+};
+
+#endif
