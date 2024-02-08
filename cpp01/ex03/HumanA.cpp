@@ -6,13 +6,13 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:30 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/07 18:22:46 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:19:00 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon weap)
+HumanA::HumanA(std::string name, Weapon &weap) : _weap(weap)
 {
 	this->_name = name;
 	this->_weap = weap;

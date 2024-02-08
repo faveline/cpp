@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 13:40:27 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 09:59:40 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/08 12:05:03 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/08 14:32:40 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef SED_H
+# define SED_H
 
-Weapon::Weapon(std::string type)
+# include <iostream>
+# include <fstream>
+# include <string>
+
+class Sed
 {
-	setType(type);
-}
+private:
+	std::string	_file;
+	std::string	_s1;
+	std::string	_s2;
+	std::string	_str;
+public:
+	Sed(std::string file, std::string s1, std::string s2);
+	~Sed(void);
+	void	getFile(void);
+	void	createFile(void);
+};
 
-Weapon::Weapon(void) {}
-
-Weapon::~Weapon(void) {}
-
-std::string	Weapon::getType(void) const
-{
-	return (this->_type);
-}
-
-void	Weapon::setType(std::string type)
-{
-	this->_type = type;
-}
+#endif

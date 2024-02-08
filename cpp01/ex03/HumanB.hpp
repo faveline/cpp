@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:56 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/07 18:08:19 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:19:16 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class HumanB
 {
 private:
 	std::string	_name;
-	Weapon		_weap;
+	Weapon		*_weap;
 public:
 	HumanB(std::string name);
 	~HumanB(void);
 	void	attack(void);
-	void	setWeapon(Weapon weap);
+	void	setWeapon(Weapon &weap);
 };
 
 #endif

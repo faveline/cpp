@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:33 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/07 18:14:54 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/08 10:30:41 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,19 @@ HumanB::~HumanB(void) {}
 
 void	HumanB::attack(void)
 {
-	std::cout << this->_name << " attacks with their ";
-	std::cout << this->_weap.getType() << std::endl;
+	if (_weap)
+	{
+		std::cout << this->_name << " attacks with their ";
+		std::cout << this->_weap->getType() << std::endl;
+	}
+	else
+	{
+		std::cout << this->_name << " attacks with their ";
+		std::cout << "bare hands" << std::endl;
+	}
 }
 
-void	HumanB::setWeapon(Weapon weap)
+void	HumanB::setWeapon(Weapon &weap)
 {
-	this->_weap = weap;
+	this->_weap = &weap;
 }
