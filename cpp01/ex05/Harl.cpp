@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 16:22:39 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 17:55:35 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:10:35 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,17 @@ void	Harl::_error(void)
 	std::cout << "error: bacon is god" << std::endl;
 }
 
+void	Harl::_null(void)
+{
+}
+
 void	Harl::complain(std::string level)
 {
-	void		(Harl::*f[])() = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
+	void		(Harl::*f[])() = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error, &Harl::_null};
 	std::string	tab[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int			i = 0;
 
-	for (int i = 0; i < 4; i++)
-	{
-		if (level == tab[i])
-			(this->*f[i])();
-	}
+	while (i < 4 && level != tab[i])
+		i++;
+	(this->*f[i])();
 }
