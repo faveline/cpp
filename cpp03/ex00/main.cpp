@@ -5,31 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 11:36:31 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/12 10:47:04 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/12 16:34:40 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
 int	main(void)
 {
-	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
-	
-	a = Fixed( 1234.4321f );
+	ClapTrap	clap("David");
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	
-	return 0;
+	clap.attack("the wall");
+	clap.takeDamage(5);
+	clap.beRepaired(30);
+	clap.attack("the wall");
+	clap.attack("the wall");
+	clap.takeDamage(7);
+	clap.beRepaired(3);
+	clap.attack("the wall");
+	clap.attack("the wall");
+	clap.takeDamage(5);
+	clap.beRepaired(3);
+	clap.attack("the wall");
+	clap.attack("the wall");
+	clap.attack("the wall");
+	clap.takeDamage(5);
+	clap.beRepaired(3);
+	clap.attack("the wall");
+	return (0);
 }
