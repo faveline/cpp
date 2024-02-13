@@ -6,13 +6,13 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/13 10:37:06 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/13 13:25:55 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= Canon
+NAME		:= FragTrap
 
-SRCS		:= main.cpp Fixed.cpp
+SRCS		:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
 CXX			:= g++

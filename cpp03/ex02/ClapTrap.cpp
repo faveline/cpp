@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:56:51 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/13 12:06:48 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:12:42 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 ClapTrap::ClapTrap(): _name("John Doe"), _HP(10), _EP(10), _AD(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called for ClapTrap" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) 
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called for ClapTrap" << std::endl;
 	this->_name = name;
 	this->_HP = 10;
 	this->_EP = 10;
 	this->_AD = 0;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &C)
+ClapTrap::ClapTrap(ClapTrap const & C)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called for ClapTrap" << std::endl;
 	*this = C;
 }
 
@@ -43,7 +43,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &cpy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Deconstructor called" << std::endl;
+	std::cout << "Deconstructor called for ClapTrap" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string &target)
@@ -84,12 +84,12 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		
 		this->_EP--;
 		this->_HP += amount;
-		if (this->_HP > 10)
+		if (this->_HP > 100)
 		{
 			std::cout << "ClapTrap " << this->_name << \
-				" is being repaired for " << 10 - this->_HP + amount \
+				" is being repaired for " << 100 - this->_HP + amount \
 				<< " HP." << std::endl;
-			this->_HP = 10;	
+			this->_HP = 100;	
 		}
 		else 
 			std::cout << "ClapTrap " << this->_name << \

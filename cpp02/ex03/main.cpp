@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:36:31 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/12 15:44:01 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/13 13:18:15 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	draw(Point const a, Point const b, Point const c, Point const point)
 			else if (i == point.getX().toInt() && j == point.getY().toInt())
 				std::cout << "P";
 			else
-				std::cout << "0";
+				std::cout << " ";
 		}
 		std::cout << std::endl;
 	}
