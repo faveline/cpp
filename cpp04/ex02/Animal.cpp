@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 10:43:13 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/14 11:09:02 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/14 11:16:31 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Animal.hpp"
 
-int	main(void)
+std::string	AAnimal::getType()const
 {
-	DiamondTrap	diam("John Cena");
-
-	// for (int i = 0; i < 55; i++)
-	//  	diam.attack("the door");
-	
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	diam.takeDamage(50);
-	diam.beRepaired(25);
-	diam.takeDamage(75);
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	return (0);
+	return (this->_type);
 }

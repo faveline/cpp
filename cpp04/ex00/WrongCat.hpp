@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 10:43:13 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/14 11:28:00 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/14 13:50:23 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
-int	main(void)
+# include "WrongAnimal.hpp"
+
+class WrongCat: public WrongAnimal
 {
-	DiamondTrap	diam("John Cena");
+public:
+	WrongCat();
+	WrongCat(const WrongCat &A);
+	WrongCat		&operator=(const WrongCat &rhs);
+	~WrongCat();
 
-	// for (int i = 0; i < 55; i++)
-	//  	diam.attack("the door");
-	
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	diam.takeDamage(50);
-	diam.beRepaired(25);
-	diam.takeDamage(75);
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	return (0);
-}
+	virtual void	makeSound()const;
+};
+
+#endif

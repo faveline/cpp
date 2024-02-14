@@ -5,30 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 10:43:13 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/14 11:30:48 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/14 13:53:08 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int	main(void)
 {
-	DiamondTrap	diam("John Cena");
+	const	Animal* meta = new Animal();
+	const	Animal* j = new Dog();
+	const	Animal* i = new Cat();
 
-	// for (int i = 0; i < 55; i++)
-	//  	diam.attack("the door");
-	
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	diam.takeDamage(50);
-	diam.beRepaired(25);
-	diam.takeDamage(75);
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	meta->makeSound();
+
+	delete (i);
+	delete (j);
+	delete (meta);
+
+	const	WrongAnimal* test = new WrongAnimal();
+	const	WrongAnimal* k = new WrongCat();
+
+	std::cout << k->getType() << " " << std::endl;
+	k->makeSound();
+	test->makeSound();
+
+	delete (k);
+	delete (test);
 	return (0);
 }

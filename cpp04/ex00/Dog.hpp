@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 10:43:13 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/14 11:19:12 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/14 13:49:40 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef DOG_H
+# define DOG_H
 
-int	main(void)
+# include "Animal.hpp"
+
+class Dog: public Animal
 {
-	DiamondTrap	diam("John Cena");
+public:
+	Dog();
+	Dog(const Dog &A);
+	Dog				&operator=(const Dog &rhs);
+	~Dog();
 
-	// for (int i = 0; i < 55; i++)
-	//  	diam.attack("the door");
-	
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	diam.takeDamage(50);
-	diam.beRepaired(25);
-	diam.takeDamage(75);
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	return (0);
-}
+	virtual void	makeSound()const;
+};
+
+#endif

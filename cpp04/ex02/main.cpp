@@ -5,30 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:18:52 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 10:43:13 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/14 11:30:48 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/14 16:39:04 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int	main(void)
 {
-	DiamondTrap	diam("John Cena");
+	//const	AAnimal* meta = new AAnimal();
+	const	Dog* j = new Dog();
+	const	Cat* i = new Cat();
 
-	// for (int i = 0; i < 55; i++)
-	//  	diam.attack("the door");
-	
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
-	diam.takeDamage(50);
-	diam.beRepaired(25);
-	diam.takeDamage(75);
-	diam.whoAmI();
-	diam.attack("the door");
-	diam.highFiveGuys();
-	diam.guardGate();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+
+	delete (i);
+	delete (j);
 	return (0);
 }
