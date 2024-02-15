@@ -1,47 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                        :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 11:09:02 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 11:16:31 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/15 12:54:10 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/15 14:38:37 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-AAnimal::AAnimal()
+AMateria::AMateria() 
 {
-	std::cout << "Constructor called for AAnimal" << std::endl;
-	this->_type = "";
+	this->_type = "none";
 }
 
-AAnimal::AAnimal(std::string type)
+AMateria::AMateria(std::string const &type)
 {
-	std::cout << "Constructor called for AAnimal" << std::endl;
 	this->_type = type;
 }
 
-AAnimal::AAnimal(const AAnimal &A)
+AMateria::AMateria(const AMateria &A)
 {
-	std::cout << "Constructor called for AAnimal" << std::endl;
 	*this = A;
 }
 
-AAnimal	&AAnimal::operator=(const AAnimal &rhs)
+AMateria	&AMateria::operator=(const AMateria &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
 }
 
-AAnimal::~AAnimal()
-{
-	std::cout << "Deconstructor called for AAnimal" << std::endl;
-}
+AMateria::~AMateria() {}
 
-std::string	AAnimal::getType()const
+std::string const	&AMateria::getType()const
 {
 	return (this->_type);
+}
+
+void	AMateria::use(ICharacter& target)
+{
+	std::cout << "~~ " << target.getName() << " is dancing on the floor ~~" << std::endl;
 }

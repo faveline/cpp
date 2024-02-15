@@ -5,29 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 11:30:48 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/15 13:45:20 by faveline         ###   ########.fr       */
+/*   Created: 2024/02/15 13:59:47 by faveline          #+#    #+#             */
+/*   Updated: 2024/02/15 14:05:53 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongCat.hpp"
+#include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
 
-int	main(void)
+int main()
 {
-	//const	AAnimal* meta = new AAnimal();
-	const	Dog* j = new Dog();
-	const	Cat* i = new Cat();
-	if (!i || !j)
-		return (delete i, delete j, 1);
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
+	ICharacter* me = new Character("me");
 
-	delete (i);
-	delete (j);
-	return (0);
+	AMateria* tmp;
+
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+
+	ICharacter* bob = new Character("bob");
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	delete bob;
+	delete me;
+	delete src;
+
+	return 0;
 }

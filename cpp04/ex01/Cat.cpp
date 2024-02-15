@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 11:26:34 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 16:07:11 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/15 13:49:56 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ Cat::Cat(const Cat &A): Animal(A._type), Brain()
 Cat	&Cat::operator=(const Cat &rhs)
 {
 	this->_type = rhs._type;
-	this->_BrainCat = new Brain();
-	this->_BrainCat->modifyIdea(rhs._BrainCat->getIdea());
+	this->_BrainCat = new (std::nothrow) Brain();
+	if (this->_BrainCat)
+		this->_BrainCat->modifyIdea(rhs._BrainCat->getIdea());
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 11:24:19 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/14 15:49:12 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/15 13:50:14 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ Dog::Dog(const Dog &A): Animal(A._type), Brain()
 Dog	&Dog::operator=(const Dog &rhs)
 {
 	this->_type = rhs._type;
-	this->_BrainDog = new Brain();
-	this->_BrainDog->modifyIdea(rhs._BrainDog->getIdea());
+	this->_BrainDog = new (std::nothrow) Brain();
+	if (this->_BrainDog)
+		this->_BrainDog->modifyIdea(rhs._BrainDog->getIdea());
 	return (*this);
 }
 
