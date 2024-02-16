@@ -6,7 +6,7 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/14 10:50:56 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/16 12:00:25 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME		:= DiamondTrap
 SRCS		:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
-CXX			:= g++
-CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98 #-g3 -fsanitize=address
+CXX			:= c++
+CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98 -g3 -fsanitize=address
 RM			:= rm -f
 
 all : $(NAME)

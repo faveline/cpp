@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:30 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 10:19:00 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 10:55:03 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 HumanA::HumanA(std::string name, Weapon &weap) : _weap(weap)
 {
 	this->_name = name;
-	this->_weap = weap;
+	//this->_weap = weap;
 }
 
 HumanA::~HumanA(void) {}

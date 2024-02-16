@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:33 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 10:30:41 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 10:58:05 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 HumanB::HumanB(std::string name)
 {
 	this->_name = name;
+	this->_weap = NULL;
 }
 
 HumanB::~HumanB(void) {}

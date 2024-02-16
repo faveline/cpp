@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 13:40:27 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/08 09:59:40 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 10:57:19 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ Weapon::Weapon(std::string type)
 	setType(type);
 }
 
-Weapon::Weapon(void) {}
+Weapon::Weapon(void)
+{
+	this->_type = "Wooden sword";
+}
 
 Weapon::~Weapon(void) {}
 

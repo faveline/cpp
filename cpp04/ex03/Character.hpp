@@ -6,20 +6,21 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 14:06:06 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/15 14:22:04 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 16:08:00 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_H
 # define CHARACTER_H
 
-#include "ICharacter.hpp"
+# include "ICharacter.hpp"
 
 class Character: public ICharacter
 {
 private:
 	AMateria	*_slot[4];
 	std::string	_name;
+	AMateria	*_Gr[100];
 public:
 	Character();
 	Character(std::string name);

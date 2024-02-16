@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:09:10 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/12 13:52:12 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 12:04:29 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Point::Point(Point const &P): _x(P.getX()), _y(P.getY()) {}
 
 Point	&Point::operator=(Point const &rhs)
 {
-	*this = rhs;
+	(void)rhs;
 	return (*this);
 }
 

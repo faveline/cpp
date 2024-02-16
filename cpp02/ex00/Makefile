@@ -6,7 +6,7 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/13 10:37:06 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/16 10:59:59 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		:= Canon
 SRCS		:= main.cpp Fixed.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
-CXX			:= g++
+CXX			:= c++
 CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98 #-g3 -fsanitize=address
 RM			:= rm -f
 

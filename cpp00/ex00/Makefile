@@ -6,7 +6,7 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/05 16:37:32 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/16 10:46:22 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		:= megaphone
 SRCS		:= megaphone.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
-CXX			:= g++
+CXX			:= c++
 CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98
 RM			:= rm -f
 

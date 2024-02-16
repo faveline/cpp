@@ -6,7 +6,7 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/05 16:36:00 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/16 10:46:56 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		:= PhoneBook
 SRCS		:= PhoneBook.cpp Contact.class.cpp PhoneBook.class.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
-CXX			:= g++
+CXX			:= c++
 CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98 -g3 -fsanitize=address
 RM			:= rm -f
 

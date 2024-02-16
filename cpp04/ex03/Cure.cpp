@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 13:46:12 by faveline          #+#    #+#             */
-/*   Updated: 2024/02/15 14:40:48 by faveline         ###   ########.fr       */
+/*   Updated: 2024/02/16 13:09:58 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ Cure::Cure()
 
 Cure::Cure(const Cure &C)
 {
+	(void)C;
 	this->_type = "cure";
 }
 
 Cure	&Cure::operator=(const Cure &rhs)
 {
+	(void)rhs;
 	this->_type = "cure";
 	return (*this);
 }
@@ -36,7 +38,7 @@ Cure	*Cure::clone()const
 	return (test);
 }
 
-void	AMateria::use(ICharacter& target)
+void	Cure::use(ICharacter& target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

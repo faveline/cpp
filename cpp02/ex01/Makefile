@@ -6,7 +6,7 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/02/09 17:42:27 by faveline         ###   ########.fr        #
+#    Updated: 2024/02/16 11:01:51 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		:= Fixed
 SRCS		:= main.cpp Fixed.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
-CXX			:= g++
+CXX			:= c++
 CPPFLAGS	:= -Wall -Werror -Wextra -std=c++98 #-g3 -fsanitize=address
 RM			:= rm -f
 
