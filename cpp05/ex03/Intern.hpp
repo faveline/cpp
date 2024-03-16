@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/15 18:32:46 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/16 14:45:19 by faveline         ###   ########.fr       */
+/*   Created: 2024/03/16 16:09:57 by faveline          #+#    #+#             */
+/*   Updated: 2024/03/16 16:40:31 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_H
-# define SHRUBBERYCREATIONFORM_H
+#ifndef INTERN_H
+# define INTERN_H
 
 # include "Form.hpp"
 
-class ShrubberyCreationForm: public AForm
+class Intern
 {
-private:
-	const std::string	_target;
 public:
-	ShrubberyCreationForm();
-	ShrubberyCreationForm(const std::string target);
-	ShrubberyCreationForm(const ShrubberyCreationForm &S);
-	ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rhs);
-	~ShrubberyCreationForm();
+	Intern();
+	Intern(const Intern &I);
+	Intern	&operator=(const Intern &rhs);
+	~Intern();
 
-	void					exec(void) const;	
+	AForm	*makeForm(const std::string name, const std::string target);
+	class FormNotFound: public std::exception
+	{
+	public:
+		const std::string	errorNotF() const;
+	};
 };
 
 #endif

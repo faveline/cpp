@@ -6,14 +6,14 @@
 #    By: faveline <faveline@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/02 10:47:00 by faveline          #+#    #+#              #
-#    Updated: 2024/03/16 15:37:19 by faveline         ###   ########.fr        #
+#    Updated: 2024/03/16 16:09:13 by faveline         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= AForm 
+NAME		:= Intern 
 
 SRCS		:= main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp \
-				RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+				RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJ			:= $(SRCS:.cpp=.o)
 
 CXX			:= c++
