@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 14:12:25 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/16 17:02:29 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:28:49 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ int	main(void)
 	{
 		std::cerr << e.errorNotF() << std::endl;
 	}
+	catch(const Bureaucrat::GradeTooHighException& e)
+	{
+		std::cerr << e.errorHigh() << '\n';
+	}
+	catch(const Bureaucrat::GradeTooLowException& e)
+	{
+		std::cerr << e.errorLow() << '\n';
+	}
 
 	std::cout << std::endl;
 	std::cout << std::endl;
@@ -59,7 +67,15 @@ int	main(void)
 	{
 		std::cerr << e.errorNotF() << std::endl;
 	}
-
+	catch(const Bureaucrat::GradeTooHighException& e)
+	{
+		std::cerr << e.errorHigh() << '\n';
+	}
+	catch(const Bureaucrat::GradeTooLowException& e)
+	{
+		std::cerr << e.errorLow() << '\n';
+	}
+	
 	std::cout << std::endl;
 	std::cout << std::endl;
 
@@ -82,6 +98,14 @@ int	main(void)
 	catch(const Intern::FormNotFound &e)
 	{
 		std::cerr << e.errorNotF() << std::endl;
+	}
+	catch(const Bureaucrat::GradeTooHighException& e)
+	{
+		std::cerr << e.errorHigh() << '\n';
+	}
+	catch(const Bureaucrat::GradeTooLowException& e)
+	{
+		std::cerr << e.errorLow() << '\n';
 	}
 	return (0);
 }

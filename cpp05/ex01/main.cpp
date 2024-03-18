@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 14:12:25 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/15 19:23:30 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:22:28 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	main(void)
 		std::cout << testF;
 		testB.signForm(testF);
 	
-		Bureaucrat testB2 = Bureaucrat("Florian", 125);
+		Bureaucrat testB2 = Bureaucrat("Yolo", 125);
 		std::cout << testB2;
 		testB2.signForm(testF);
 		

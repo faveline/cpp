@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 11:19:00 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/16 13:33:55 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:17:33 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	main(void)
 		std::cerr << e.errorLow() << '\n';
 	}
 
+	std::cout << std::endl;
+
 	try
 	{
 		Bureaucrat test = Bureaucrat("Pierre", 200);
@@ -43,8 +45,10 @@ int	main(void)
 	}
 	catch(const Bureaucrat::GradeTooLowException & e)
 	{
-		std::cerr << e.errorLow() << '\n';
+		std::cerr << e.errorLow() << '\n';	
 	}
+
+	std::cout << std::endl;
 
 	try
 	{
