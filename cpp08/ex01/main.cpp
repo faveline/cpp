@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:35:13 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/21 18:21:58 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:32:11 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(void)
 	Span test = Span(5);
 	Span egale = Span(2);
 	Span multi = Span(20000);
+	Span empty;
 	
 	test.addNumber(6);
 	test.addNumber(3);
@@ -36,10 +37,12 @@ int	main(void)
 	// egale = test;
 	// egale.printList();
 
-	multi.addNumberIter(20000, 0, 700000);
-	std::cout << "Longest: " << multi.longestSpan() << std::endl;
-	std::cout << "Shortest: " << multi.shortestSpan() << std::endl;
-	//multi.printList();
+	// multi.addNumberIter(20000, 0, 700000);
+	// std::cout << "Longest: " << multi.longestSpan() << std::endl;
+	// std::cout << "Shortest: " << multi.shortestSpan() << std::endl;
 
+	// empty.addNumber(5);
+	// empty.printList();
+	
 	return (0);
 }

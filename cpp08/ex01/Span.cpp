@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:35:23 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/21 18:17:44 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:30:13 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void	Span::addNumberIter(int nbr, int Rmin, int Rmax)
 	for (int i = 0; i < nbr; i++)
 		list.push_back(Rmin + (double)(Rmax - Rmin) / nbr * i);
 	this->_mylist.insert(this->_mylist.end(), list.begin(), list.end());
+	this->_N = nbr;
 }
 
 static int	abs(int	x)
@@ -106,8 +107,10 @@ int	Span::shortestSpan(void)
 	std::list<int>	list;
 	int				min;
 
+	if (!this->_N)
+		return (std::cout << "The list is empty: ", 0);
 	min = 2147483647;
-	list = this->_mylist;	
+	list = this->_mylist;		
 	for (std::list<int>::iterator i = list.begin(); i != list.end(); ++i)
 	{
 		for (std::list<int>::iterator j = i; j != list.end(); ++j)
@@ -124,8 +127,10 @@ int	Span::longestSpan(void)
 	std::list<int>	list;
 	int				min;
 	int				max;
-
-	list = this->_mylist;
+	
+	if (!this->_N)
+		return (std::cout << "The list is empty: ", 0);
+	list = this->_mylist;	
 	min = list.front();
 	max = list.front();	
 	for (std::list<int>::iterator i = list.begin(); i != list.end(); ++i)
@@ -142,6 +147,11 @@ void	Span::printList(void) const
 {	
 	std::list<int>	list;
 	
+	if (!this->_N)
+	{
+		std::cout << "The list is empty." << std::endl;
+		return ;
+	}
 	list = this->_mylist;
 	for (std::list<int>::iterator i = list.begin(); i != list.end(); ++i)
 		std::cout << *i << std::endl;
@@ -151,6 +161,11 @@ void	Span::printList(void)
 {	
 	std::list<int>	list;
 	
+	if (!this->_N)
+	{
+		std::cout << "The list is empty." << std::endl;
+		return ;
+	}
 	list = this->_mylist;
 	for (std::list<int>::iterator i = list.begin(); i != list.end(); ++i)
 		std::cout << *i << std::endl;
