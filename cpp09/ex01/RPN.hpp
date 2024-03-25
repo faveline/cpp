@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MutantStack.hpp                                    :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 11:43:14 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/25 13:47:24 by faveline         ###   ########.fr       */
+/*   Created: 2024/03/25 17:50:54 by faveline          #+#    #+#             */
+/*   Updated: 2024/03/25 18:31:05 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MUTANTSTACK_H
-# define MUTANTSTACK_H
+#ifndef RPN_H
+# define RPN_H
 
 # include <iostream>
 # include <stack>
+# include <stdlib.h>
 
-template < typename T >
-class MutantStack: public std::stack<T>
+class RPN
 {
 private:
-
+	char	*_str;
 public:
-	MutantStack() {}
-	MutantStack(const MutantStack &M) {*this = M;}
-	MutantStack	&operator=(const MutantStack &rhs) {
-		std::stack<T>::operator=(rhs);
-	}
-	~MutantStack() {}
+	RPN();
+	RPN(char *str);
+	RPN(const RPN &R);
+	RPN	&operator=(const RPN &rhs);
+	~RPN();
 
-	typedef typename std::stack<T>::container_type::iterator iterator;
-	iterator	begin() {return this->c.begin();}
-	iterator	end() {return this->c.end();}
+	void	doRPN();
 };
 
 #endif
