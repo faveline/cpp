@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:51:59 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/25 18:33:41 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/26 10:57:53 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ RPN::RPN(const RPN &R)
 
 RPN	&RPN::operator=(const RPN &rhs)
 {
-	(void)rhs;
+	this->_str = rhs._str;
 	return (*this);
 }
 

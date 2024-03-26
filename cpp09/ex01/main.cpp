@@ -6,7 +6,7 @@
 /*   By: faveline <faveline@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 17:50:18 by faveline          #+#    #+#             */
-/*   Updated: 2024/03/25 18:16:13 by faveline         ###   ########.fr       */
+/*   Updated: 2024/03/26 15:31:58 by faveline         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	check_arg(int argc, char *argv[])
 	char	char_ok[] = {'0','1','2','3','4','5','6','7','8','9','+','-','*','/',' '};
 	size_t	j;
 
-	if (argc != 2)
+	if (argc != 2 || !argv[1][0])
 	{
 		std::cout << "Wrong number of arguments.\n";
 		return (1);
